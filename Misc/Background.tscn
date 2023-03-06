@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqjovyig1a30t"]
+
+[ext_resource type="Texture2D" uid="uid://cfyj7cf4nv64b" path="res://Levels/Resources/Sunny-land-assets-files/PNG/environment/layers/back.png" id="1_i545w"]
+[ext_resource type="Script" path="res://Misc/Background.gd" id="2_qso7k"]
+
+[node name="Sprite2D" type="Sprite2D"]
+modulate = Color(0.701961, 0.843137, 0.815686, 1)
+z_index = -1
+texture_filter = 1
+position = Vector2(-100, 0)
+texture = ExtResource("1_i545w")
+script = ExtResource("2_qso7k")

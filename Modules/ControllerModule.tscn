@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://Modules/ControllerModule.gd" id="1_bjn4i"]
+
+[node name="Controller" type="Node2D"]
+script = ExtResource("1_bjn4i")

@@ -1,0 +1,153 @@
+[gd_scene load_steps=21 format=3 uid="uid://b1tx3pplyuucw"]
+
+[ext_resource type="Texture2D" uid="uid://dcm7ge62d8w2g" path="res://Characters/Sprites/slime_idle3-qftkrd.png" id="1_jbdp0"]
+[ext_resource type="PackedScene" path="res://Modules/ControllerModule.tscn" id="2_16w2a"]
+[ext_resource type="Texture2D" uid="uid://csqqth0atfx8t" path="res://Characters/Sprites/slime_move-vnkhpn.png" id="2_p0pbs"]
+[ext_resource type="PackedScene" uid="uid://bn6b3yt27xohy" path="res://Modules/SpriteManagerModule.tscn" id="4_0qaol"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7sqxu"]
+atlas = ExtResource("1_jbdp0")
+region = Rect2(0, 288, 80, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_trrbd"]
+atlas = ExtResource("1_jbdp0")
+region = Rect2(80, 288, 80, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ws03c"]
+atlas = ExtResource("1_jbdp0")
+region = Rect2(160, 288, 80, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e8m8l"]
+atlas = ExtResource("1_jbdp0")
+region = Rect2(240, 288, 80, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yqmyd"]
+atlas = ExtResource("1_jbdp0")
+region = Rect2(320, 288, 80, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u8xn1"]
+atlas = ExtResource("1_jbdp0")
+region = Rect2(400, 288, 80, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1utu1"]
+atlas = ExtResource("1_jbdp0")
+region = Rect2(480, 288, 80, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q6lpc"]
+atlas = ExtResource("2_p0pbs")
+region = Rect2(0, 288, 80, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1nvil"]
+atlas = ExtResource("2_p0pbs")
+region = Rect2(80, 288, 80, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5wkul"]
+atlas = ExtResource("2_p0pbs")
+region = Rect2(160, 288, 80, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rxxvh"]
+atlas = ExtResource("2_p0pbs")
+region = Rect2(240, 288, 80, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1fjis"]
+atlas = ExtResource("2_p0pbs")
+region = Rect2(320, 288, 80, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l454c"]
+atlas = ExtResource("2_p0pbs")
+region = Rect2(400, 288, 80, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ab4d"]
+atlas = ExtResource("2_p0pbs")
+region = Rect2(480, 288, 80, 72)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3hqho"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7sqxu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_trrbd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ws03c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e8m8l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yqmyd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u8xn1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1utu1")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q6lpc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1nvil")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5wkul")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rxxvh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1fjis")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l454c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ab4d")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_slan2"]
+size = Vector2(20, 16)
+
+[node name="Splat" type="CharacterBody2D"]
+collision_mask = 2
+
+[node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_3hqho")
+animation = &"Idle"
+frame_progress = 0.77981
+offset = Vector2(5, -5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -1)
+shape = SubResource("RectangleShape2D_slan2")
+
+[node name="ControllerModule" parent="." node_paths=PackedStringArray("character", "leftRay", "rightRay") instance=ExtResource("2_16w2a")]
+character = NodePath("..")
+speed = 200
+gravity = 350
+leftRay = NodePath("../LeftRay")
+rightRay = NodePath("../RightRay")
+
+[node name="SpriteManagerModule" parent="." node_paths=PackedStringArray("character", "aSprite") instance=ExtResource("4_0qaol")]
+character = NodePath("..")
+aSprite = NodePath("../AnimatedSprite")
+
+[node name="LeftRay" type="RayCast2D" parent="."]
+target_position = Vector2(-14, 0)
+collision_mask = 2
+
+[node name="RightRay" type="RayCast2D" parent="."]
+target_position = Vector2(12, 0)
+collision_mask = 2

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bn6b3yt27xohy"]
+
+[ext_resource type="Script" path="res://Modules/SpriteManagerModule.gd" id="1_eadfb"]
+
+[node name="SpriteManagerModule" type="Node2D"]
+script = ExtResource("1_eadfb")

@@ -1,0 +1,9 @@
+res://Levels/BestLevel.tscn
+res://Levels/Resources/Level.tres
+res://Characters/Splat.tscn
+res://Modules/SpriteManagerModule.tscn
+res://Modules/GravityModule.tscn
+res://Misc/Background.tscn
+res://Misc/MainCamera.tscn
+res://Modules/ControllerModule.gd
+res://Misc/gem.tscn

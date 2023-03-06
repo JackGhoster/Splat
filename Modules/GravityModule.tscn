@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://8l8pi7q64xxj"]
+
+[sub_resource type="GDScript" id="GDScript_nrdlv"]
+script/source = "extends Node2D
+
+@export var gravity : int = 250
+@export var character : CharacterBody2D
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	gravity *= 10
+
+func _physics_process(delta):
+	#gravity
+	if not character.is_on_floor():
+		character.velocity.y = character.velocity.y + (gravity * delta)
+	character.move_and_slide()
+	
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
+[node name="GravityModule" type="Node2D"]
+script = SubResource("GDScript_nrdlv")

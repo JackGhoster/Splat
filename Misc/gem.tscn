@@ -1,0 +1,44 @@
+[gd_scene load_steps=8 format=3 uid="uid://ckm28e6l2nxe7"]
+
+[ext_resource type="Texture2D" uid="uid://brd4e21i64dir" path="res://Levels/Resources/Sunny-land-assets-files/PNG/sprites/gem/gem-1.png" id="1_swq77"]
+[ext_resource type="Texture2D" uid="uid://ci70oys1ccswi" path="res://Levels/Resources/Sunny-land-assets-files/PNG/sprites/gem/gem-2.png" id="2_ttksi"]
+[ext_resource type="Texture2D" uid="uid://wxkijdorf8h7" path="res://Levels/Resources/Sunny-land-assets-files/PNG/sprites/gem/gem-3.png" id="3_abdw8"]
+[ext_resource type="Texture2D" uid="uid://c1niyg4tls6xk" path="res://Levels/Resources/Sunny-land-assets-files/PNG/sprites/gem/gem-4.png" id="4_wj40f"]
+[ext_resource type="Texture2D" uid="uid://23hdgg304qy1" path="res://Levels/Resources/Sunny-land-assets-files/PNG/sprites/gem/gem-5.png" id="5_7e6ha"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gj1rl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_swq77")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ttksi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_abdw8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_wj40f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_7e6ha")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kg6t1"]
+radius = 8.06226
+
+[node name="Gem" type="Area2D"]
+collision_layer = 4
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_gj1rl")
+frame_progress = 0.707992
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_kg6t1")

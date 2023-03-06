@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c83ofyxu7tnc4"]
+
+[ext_resource type="Script" path="res://Misc/MainCamera.gd" id="1_5an47"]
+
+[node name="Camera2D" type="Camera2D"]
+zoom = Vector2(4, 4)
+drag_top_margin = 0.7
+script = ExtResource("1_5an47")
