@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=10 format=3 uid="uid://bhlim2y0qr8kp"]
+[gd_resource type="TileSet" load_steps=12 format=3 uid="uid://bhlim2y0qr8kp"]
 
 [ext_resource type="Texture2D" uid="uid://dgs0mnf0owbty" path="res://Levels/Resources/Sunny-land-assets-files/PNG/environment/layers/tileset.png" id="1_4t0k8"]
 [ext_resource type="Texture2D" uid="uid://hygfhrkkv2k6" path="res://Levels/Resources/Sunny-land-assets-files/PNG/environment/layers/props.png" id="2_jhmt3"]
@@ -17,6 +17,12 @@ tile_data = PackedInt32Array(0, 196633, 3, 65536, 196633, 3, 131072, 196633, 3, 
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_nyoav"]
 tile_data = PackedInt32Array(0, 196633, 3, 65536, 196633, 3, 131072, 196633, 3, 196608, 196633, 3, 262144, 196633, 3, 1, 196633, 3, 65537, 196633, 3, 131073, 196633, 3, 196609, 196633, 3, 262145, 196633, 3, 2, 196633, 3, 65538, 196633, 3, 131074, 196633, 3, 196610, 196633, 3, 262146, 196633, 3, 3, 196633, 3, 65539, 196633, 3, 131075, 196633, 3, 196611, 196633, 3, 262147, 196633, 3, 4, 196633, 3, 65540, 196633, 3, 131076, 196633, 3, 196612, 196633, 3, 262148, 196633, 3, 5, 196633, 3, 65541, 196633, 3, 131077, 196633, 3, 196613, 196633, 3, 262149, 196633, 3, 6, 196633, 3, 65542, 196633, 3, 131078, 196633, 3, 196614, 196633, 3, 262150, 196633, 3, 7, 196633, 3, 65543, 196633, 3, 131079, 196633, 3, 196615, 196633, 3, 262151, 196633, 3)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_s3pkw"]
+tile_data = PackedInt32Array(0, 1376281, 18, 65536, 1376281, 18, 131072, 1376281, 18, 196608, 1376281, 18, 262144, 1376281, 18, 1, 1376281, 18, 65537, 1376281, 18, 131073, 1376281, 18, 196609, 1376281, 18, 262145, 1376281, 18, 2, 1376281, 18, 65538, 1376281, 18, 131074, 1376281, 18, 196610, 1376281, 18, 262146, 1376281, 18, 3, 1376281, 18, 65539, 1376281, 18, 131075, 1376281, 18, 196611, 1376281, 18, 262147, 1376281, 18, 4, 1376281, 18, 65540, 1376281, 18, 131076, 1376281, 18, 196612, 1376281, 18, 262148, 1376281, 18)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_w3tnp"]
+tile_data = PackedInt32Array(0, 196633, 3, 65536, 196633, 3, 131072, 196633, 3, 196608, 196633, 3, 262144, 196633, 3, 327680, 196633, 3, 1, 196633, 3, 65537, 196633, 3, 131073, 196633, 3, 196609, 196633, 3, 262145, 196633, 3, 327681, 196633, 3, 2, 196633, 3, 65538, 196633, 3, 131074, 196633, 3, 196610, 196633, 3, 262146, 196633, 3, 327682, 196633, 3, 3, 196633, 3, 65539, 196633, 3, 131075, 196633, 3, 196611, 196633, 3, 262147, 196633, 3, 327683, 196633, 3, 4, 196633, 3, 65540, 196633, 3, 131076, 196633, 3, 196612, 196633, 3, 262148, 196633, 3, 327684, 196633, 3, 5, 196633, 3, 65541, 196633, 3, 131077, 196633, 3, 196613, 196633, 3, 262149, 196633, 3, 327685, 196633, 3)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5d23a"]
 texture = ExtResource("1_4t0k8")
@@ -378,6 +384,7 @@ texture = ExtResource("1_4t0k8")
 1:20/0 = 0
 1:20/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:20/0/physics_layer_0/angular_velocity = 0.0
+1:20/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:20/0 = 0
 3:20/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 3:20/0/physics_layer_0/angular_velocity = 0.0
@@ -813,3 +820,5 @@ pattern_1 = SubResource("TileMapPattern_547jq")
 pattern_2 = SubResource("TileMapPattern_murbw")
 pattern_3 = SubResource("TileMapPattern_6kxea")
 pattern_4 = SubResource("TileMapPattern_nyoav")
+pattern_5 = SubResource("TileMapPattern_s3pkw")
+pattern_6 = SubResource("TileMapPattern_w3tnp")
