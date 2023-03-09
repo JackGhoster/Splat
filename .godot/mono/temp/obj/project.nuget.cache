@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "goML+zr9l9EtS5lLuK+Xl1Jl0vO2+g1P1yMRJpiN8k3YwxMR5/pO86GJ/QOqobkoeb1CIvWDDa2rWA1RtRH+zg==",
+  "dgSpecHash": "JwxhSA1l+BLb7n+3z6ZQsEJ5nv1f5FEbiiVjSrcUSEpQYyGuFIGGwvb+HKolepcRiRQYiZ4CThmIUsTFpi9pqA==",
   "success": true,
-  "projectFilePath": "G:\\Documents\\GodotProjects\\Splat.csproj",
+  "projectFilePath": "G:\\Documents\\Godot Projects\\Splat\\Splat\\Splat.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\JackG\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder\\godot.sourcegenerators\\4.0.0\\godot.sourcegenerators.4.0.0.nupkg.sha512",
     "C:\\Users\\JackG\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder\\godotsharp\\4.0.0\\godotsharp.4.0.0.nupkg.sha512",

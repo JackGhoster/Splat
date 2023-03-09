@@ -1,9 +1,11 @@
-[gd_scene load_steps=21 format=3 uid="uid://b1tx3pplyuucw"]
+[gd_scene load_steps=24 format=3 uid="uid://dc5850sj7q3ai"]
 
 [ext_resource type="Texture2D" uid="uid://dcm7ge62d8w2g" path="res://Characters/Sprites/slime_idle3-qftkrd.png" id="1_jbdp0"]
+[ext_resource type="PackedScene" uid="uid://8pr53ui8dggm" path="res://Misc/SplatBaseParticles.tscn" id="1_k7wqt"]
 [ext_resource type="PackedScene" path="res://Modules/ControllerModule.tscn" id="2_16w2a"]
 [ext_resource type="Texture2D" uid="uid://csqqth0atfx8t" path="res://Characters/Sprites/slime_move-vnkhpn.png" id="2_p0pbs"]
 [ext_resource type="PackedScene" uid="uid://bn6b3yt27xohy" path="res://Modules/SpriteManagerModule.tscn" id="4_0qaol"]
+[ext_resource type="PackedScene" uid="uid://dijk65eix0mjg" path="res://Misc/CollisionManagerModule.tscn" id="5_mmk2t"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7sqxu"]
 atlas = ExtResource("1_jbdp0")
@@ -117,10 +119,16 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_slan2"]
-size = Vector2(20, 16)
+size = Vector2(16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_py7rw"]
+size = Vector2(26, 18)
 
 [node name="Splat" type="CharacterBody2D"]
 collision_mask = 2
+
+[node name="SplatBaseParticles" parent="." instance=ExtResource("1_k7wqt")]
+amount = 25
 
 [node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
@@ -133,12 +141,13 @@ offset = Vector2(5, -5)
 position = Vector2(-1, -1)
 shape = SubResource("RectangleShape2D_slan2")
 
-[node name="ControllerModule" parent="." node_paths=PackedStringArray("character", "leftRay", "rightRay") instance=ExtResource("2_16w2a")]
+[node name="ControllerModule" parent="." node_paths=PackedStringArray("character", "leftRay", "rightRay", "downRay") instance=ExtResource("2_16w2a")]
 character = NodePath("..")
 speed = 200
 gravity = 350
 leftRay = NodePath("../LeftRay")
 rightRay = NodePath("../RightRay")
+downRay = NodePath("../DownRay")
 
 [node name="SpriteManagerModule" parent="." node_paths=PackedStringArray("character", "aSprite") instance=ExtResource("4_0qaol")]
 character = NodePath("..")
@@ -151,3 +160,22 @@ collision_mask = 2
 [node name="RightRay" type="RayCast2D" parent="."]
 target_position = Vector2(12, 0)
 collision_mask = 2
+
+[node name="DownRay" type="RayCast2D" parent="."]
+target_position = Vector2(0, 8)
+collision_mask = 2
+
+[node name="CollisionManagerModule" parent="." instance=ExtResource("5_mmk2t")]
+position = Vector2(-1, 0)
+scale = Vector2(0.880001, 1)
+
+[node name="LandingParticleEmmiter" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LandingParticleEmmiter"]
+position = Vector2(-1, -1)
+shape = SubResource("RectangleShape2D_py7rw")
+debug_color = Color(0.529412, 0.494118, 0.764706, 0.129412)
+
+[connection signal="body_entered" from="LandingParticleEmmiter" to="." method="_on_particle_emmiter_body_entered"]

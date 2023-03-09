@@ -91,11 +91,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\Documents\\GodotProjects\\Splat.csproj",
+      "projectUniqueName": "G:\\Documents\\Godot Projects\\Splat\\Splat\\Splat.csproj",
       "projectName": "Splat",
-      "projectPath": "G:\\Documents\\GodotProjects\\Splat.csproj",
+      "projectPath": "G:\\Documents\\Godot Projects\\Splat\\Splat\\Splat.csproj",
       "packagesPath": "C:\\Users\\JackG\\.nuget\\packages\\",
-      "outputPath": "G:\\Documents\\GodotProjects\\.godot\\mono\\temp\\obj\\",
+      "outputPath": "G:\\Documents\\Godot Projects\\Splat\\Splat\\.godot\\mono\\temp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Users\\JackG\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder"

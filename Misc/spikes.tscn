@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfrgpi46sc2mw"]
+
+[ext_resource type="Texture2D" uid="uid://dq2b42g0jkekr" path="res://Levels/Resources/Sunny-land-assets-files/PNG/environment/props/spikes.png" id="1_26xqp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6phny"]
+size = Vector2(16, 10)
+
+[node name="Spikes" type="Area2D"]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -5)
+shape = SubResource("RectangleShape2D_6phny")
+debug_color = Color(0.988235, 0, 0.282353, 0.419608)
+
+[node name="Spikes" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -5)
+texture = ExtResource("1_26xqp")

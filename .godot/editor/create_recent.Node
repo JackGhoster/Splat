@@ -1,6 +1,13 @@
 CollisionShape2D
-AnimatedSprite2D
 Area2D
+GPUParticles2D
+HBoxContainer
+Control
+CanvasLayer
+Container
+Label
+GridContainer
+AnimatedSprite2D
 RayCast2D
 Camera2D
 TileMap

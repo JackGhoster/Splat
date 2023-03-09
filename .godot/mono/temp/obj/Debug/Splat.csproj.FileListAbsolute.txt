@@ -15,3 +15,20 @@ G:\Documents\GodotProjects\.godot\mono\temp\obj\Debug\refint\Splat.dll
 G:\Documents\GodotProjects\.godot\mono\temp\obj\Debug\Splat.pdb
 G:\Documents\GodotProjects\.godot\mono\temp\obj\Debug\Splat.genruntimeconfig.cache
 G:\Documents\GodotProjects\.godot\mono\temp\obj\Debug\ref\Splat.dll
+G:\Documents\Godot Projects\Splat\Splat\.godot\mono\temp\bin\Debug\Splat.deps.json
+G:\Documents\Godot Projects\Splat\Splat\.godot\mono\temp\bin\Debug\Splat.runtimeconfig.json
+G:\Documents\Godot Projects\Splat\Splat\.godot\mono\temp\bin\Debug\Splat.dll
+G:\Documents\Godot Projects\Splat\Splat\.godot\mono\temp\bin\Debug\Splat.pdb
+G:\Documents\Godot Projects\Splat\Splat\.godot\mono\temp\bin\Debug\GodotSharp.dll
+G:\Documents\Godot Projects\Splat\Splat\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+G:\Documents\Godot Projects\Splat\Splat\.godot\mono\temp\obj\Debug\Splat.csproj.AssemblyReference.cache
+G:\Documents\Godot Projects\Splat\Splat\.godot\mono\temp\obj\Debug\Splat.GeneratedMSBuildEditorConfig.editorconfig
+G:\Documents\Godot Projects\Splat\Splat\.godot\mono\temp\obj\Debug\Splat.AssemblyInfoInputs.cache
+G:\Documents\Godot Projects\Splat\Splat\.godot\mono\temp\obj\Debug\Splat.AssemblyInfo.cs
+G:\Documents\Godot Projects\Splat\Splat\.godot\mono\temp\obj\Debug\Splat.csproj.CoreCompileInputs.cache
+G:\Documents\Godot Projects\Splat\Splat\.godot\mono\temp\obj\Debug\Splat.csproj.CopyComplete
+G:\Documents\Godot Projects\Splat\Splat\.godot\mono\temp\obj\Debug\Splat.dll
+G:\Documents\Godot Projects\Splat\Splat\.godot\mono\temp\obj\Debug\refint\Splat.dll
+G:\Documents\Godot Projects\Splat\Splat\.godot\mono\temp\obj\Debug\Splat.pdb
+G:\Documents\Godot Projects\Splat\Splat\.godot\mono\temp\obj\Debug\Splat.genruntimeconfig.cache
+G:\Documents\Godot Projects\Splat\Splat\.godot\mono\temp\obj\Debug\ref\Splat.dll

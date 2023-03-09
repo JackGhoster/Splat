@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://ckm28e6l2nxe7"]
+[gd_scene load_steps=11 format=3 uid="uid://ckm28e6l2nxe7"]
 
 [ext_resource type="Texture2D" uid="uid://brd4e21i64dir" path="res://Levels/Resources/Sunny-land-assets-files/PNG/sprites/gem/gem-1.png" id="1_swq77"]
 [ext_resource type="Texture2D" uid="uid://ci70oys1ccswi" path="res://Levels/Resources/Sunny-land-assets-files/PNG/sprites/gem/gem-2.png" id="2_ttksi"]
@@ -32,6 +32,27 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_kg6t1"]
 radius = 8.06226
 
+[sub_resource type="Gradient" id="Gradient_xysl8"]
+colors = PackedColorArray(0.894477, 0.671452, 0.812402, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_8lb5f"]
+gradient = SubResource("Gradient_xysl8")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_l541r"]
+lifetime_randomness = 0.1
+emission_shape = 1
+emission_sphere_radius = 15.0
+particle_flag_disable_z = true
+direction = Vector3(3.056, 1.133, 0)
+spread = 180.0
+gravity = Vector3(0, 0, 0)
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+tangential_accel_min = 23.16
+tangential_accel_max = 23.16
+scale_max = 3.0
+color_ramp = SubResource("GradientTexture1D_8lb5f")
+
 [node name="Gem" type="Area2D"]
 collision_layer = 4
 
@@ -42,3 +63,11 @@ frame_progress = 0.707992
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_kg6t1")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+emitting = false
+process_material = SubResource("ParticleProcessMaterial_l541r")
+lifetime = 0.7
+one_shot = true
+explosiveness = 0.29
+randomness = 0.26
