@@ -1,6 +1,13 @@
-res://Levels/BestLevel.tscn
-res://Levels/Resources/Level.tres
 res://Characters/Splat.tscn
+res://Levels/Resources/Level.tres
+res://Levels/BestLevel.tscn
 res://Misc/gem.tscn
 res://Misc/spikes.tscn
 res://Misc/CollisionManagerModule.tscn
+res://Misc/StatsUI.tscn
+res://Misc/StatsUI.gd
+res://Misc/GameManager.gd
+res://Misc/CollisionManagerModule.gd
+res://Modules/ControllerModule.gd
+res://Misc/WinArea.gd
+res://Misc/WinArea.tscn

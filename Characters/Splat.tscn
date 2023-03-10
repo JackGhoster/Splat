@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://dc5850sj7q3ai"]
+[gd_scene load_steps=23 format=3 uid="uid://dc5850sj7q3ai"]
 
 [ext_resource type="Texture2D" uid="uid://dcm7ge62d8w2g" path="res://Characters/Sprites/slime_idle3-qftkrd.png" id="1_jbdp0"]
 [ext_resource type="PackedScene" uid="uid://8pr53ui8dggm" path="res://Misc/SplatBaseParticles.tscn" id="1_k7wqt"]
@@ -121,9 +121,6 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_slan2"]
 size = Vector2(16, 16)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_py7rw"]
-size = Vector2(26, 18)
-
 [node name="Splat" type="CharacterBody2D"]
 collision_mask = 2
 
@@ -168,14 +165,3 @@ collision_mask = 2
 [node name="CollisionManagerModule" parent="." instance=ExtResource("5_mmk2t")]
 position = Vector2(-1, 0)
 scale = Vector2(0.880001, 1)
-
-[node name="LandingParticleEmmiter" type="Area2D" parent="."]
-collision_layer = 0
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LandingParticleEmmiter"]
-position = Vector2(-1, -1)
-shape = SubResource("RectangleShape2D_py7rw")
-debug_color = Color(0.529412, 0.494118, 0.764706, 0.129412)
-
-[connection signal="body_entered" from="LandingParticleEmmiter" to="." method="_on_particle_emmiter_body_entered"]

@@ -20,10 +20,14 @@ func GemLogic(area):
 	area.get_node("CollisionShape2D").disabled = true
 	particles.emitting = true
 	lastGem = area
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(0.4).timeout
 	if lastGem != null:
 		area.queue_free()
 		lastGem = null
 		
 func SpikeLogic():
+	GameManager.score = 0
+	GameManager.timer = 0
+	GameManager.deaths += 1
 	get_tree().reload_current_scene()
+	

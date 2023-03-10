@@ -28,9 +28,7 @@ func _physics_process(delta):
 		
 	#applying inertia
 	character.velocity.x = lerp(character.velocity.x,ThisVelocity.x, inertiaWeight)
-#	print(ThisVelocity.y)
 	character.velocity.y = ThisVelocity.y
-	print(character.velocity.y)
 	character.move_and_slide()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -11,10 +11,11 @@ font_size = 24
 outline_size = 7
 outline_color = Color(0, 0, 0, 1)
 
-[node name="StatsUI" type="CanvasLayer" node_paths=PackedStringArray("score", "timer")]
+[node name="StatsUI" type="CanvasLayer" node_paths=PackedStringArray("score", "timer", "deaths")]
 script = ExtResource("1_bxgts")
-score = NodePath("Control/HBoxContainer/Gems")
-timer = NodePath("Control/HBoxContainer2/Time")
+score = NodePath("Control/GEMS/Gems")
+timer = NodePath("Control/TIME/Time")
+deaths = NodePath("Control/DEATHS/Deaths")
 metadata/_edit_use_anchors_ = true
 
 [node name="Control" type="Control" parent="."]
@@ -27,39 +28,52 @@ offset_right = 20.0
 offset_bottom = 40.0
 grow_horizontal = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+[node name="GEMS" type="HBoxContainer" parent="Control"]
 layout_mode = 1
-offset_left = 372.0
-offset_top = 26.0
-offset_right = 577.0
-offset_bottom = 63.0
+offset_left = -540.0
+offset_top = 8.0
+offset_right = -335.0
+offset_bottom = 45.0
 
-[node name="GemsText" type="Label" parent="Control/HBoxContainer"]
+[node name="GemsText" type="Label" parent="Control/GEMS"]
 layout_mode = 2
 size_flags_horizontal = 0
 text = "Gems Collected:"
 label_settings = SubResource("LabelSettings_wb433")
 
-[node name="Gems" type="Label" parent="Control/HBoxContainer"]
+[node name="Gems" type="Label" parent="Control/GEMS"]
 layout_mode = 2
 size_flags_horizontal = 0
 text = "0"
 label_settings = SubResource("LabelSettings_wb433")
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="Control"]
+[node name="TIME" type="HBoxContainer" parent="Control"]
 layout_mode = 0
-offset_left = -532.0
-offset_top = 26.0
-offset_right = -443.0
-offset_bottom = 66.0
+offset_left = 12.0
+offset_top = 8.0
+offset_right = 101.0
+offset_bottom = 48.0
 
-[node name="TimerText" type="Label" parent="Control/HBoxContainer2"]
+[node name="Time" type="Label" parent="Control/TIME"]
 layout_mode = 2
 size_flags_horizontal = 0
-text = "Time: "
+text = "0"
 label_settings = SubResource("LabelSettings_wb433")
 
-[node name="Time" type="Label" parent="Control/HBoxContainer2"]
+[node name="DEATHS" type="HBoxContainer" parent="Control"]
+layout_mode = 0
+offset_left = 460.0
+offset_top = 8.0
+offset_right = 573.0
+offset_bottom = 48.0
+
+[node name="DeathsText" type="Label" parent="Control/DEATHS"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Deaths: "
+label_settings = SubResource("LabelSettings_wb433")
+
+[node name="Deaths" type="Label" parent="Control/DEATHS"]
 layout_mode = 2
 size_flags_horizontal = 0
 text = "0"

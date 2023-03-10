@@ -16,5 +16,3 @@ func _physics_process(delta):
 		return
 	position = lerp(position, followTarget.position, interpolationWeight)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
